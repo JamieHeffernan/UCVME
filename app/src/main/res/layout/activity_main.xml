@@ -4,15 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/baccy"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/browsejobsbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="Browse Jobs"
+        app:layout_constraintBottom_toTopOf="@+id/editprofilebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/editprofilebutton"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="56dp"
+        android:text="Edit Profile"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/browseprofilebutton"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="Browse Profiles"
+        app:layout_constraintBottom_toTopOf="@+id/createjobbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/createjobbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="Create Job"
+        app:layout_constraintBottom_toTopOf="@+id/browsejobsbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="355dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:text="UCVME"
+        android:textSize="100sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
