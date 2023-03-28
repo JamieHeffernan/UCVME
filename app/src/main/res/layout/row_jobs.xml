@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Job's photo -->
+        <ImageView
+            android:id="@+id/job_photo"
+            android:layout_width="96dp"
+            android:layout_height="96dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <!-- Job's type and creator -->
+                <TextView
+                    android:id="@+id/job_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Type"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/job_creator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Creator Name"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/job_wage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wage: $10/hour"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/job_date_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start: 01/01/2022"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/job_date_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="End: 01/01/2023"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <!-- Job's requirements -->
+    <TextView
+        android:id="@+id/job_requirements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Requirements: Lorem ipsum dolor sit amet, consectetur adipiscing."
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Job's description -->
+    <TextView
+        android:id="@+id/job_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
