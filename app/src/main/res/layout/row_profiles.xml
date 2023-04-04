@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- Person's photo -->
+    <ImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <!-- Person's name -->
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <!-- Person's location -->
+        <TextView
+            android:id="@+id/person_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dublin"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <!-- Person's bio -->
+        <TextView
+            android:id="@+id/person_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Location dropdown -->
+    <Spinner
+        android:id="@+id/location"
+        android:prompt="@string/location_prompt"
+        android:backgroundTint="#000"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/county"
+        />
+
+    <!-- Job type dropdown -->
+    <Spinner
+        android:id="@+id/jobType"
+        android:prompt="@string/job_type_prompt"
+        android:backgroundTint="#000"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/location"
+        />
+
+    <!-- Refresh button -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:text="REFRESH"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"/>
+
+    <!-- List view for profiles -->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="330dp"
+        android:layout_height="460dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
