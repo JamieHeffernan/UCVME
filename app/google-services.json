@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "923722973928",
+    "project_id": "ucvme-c46c3",
+    "storage_bucket": "ucvme-c46c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923722973928:android:23a3167e6d139e47c2ff5d",
+        "android_client_info": {
+          "package_name": "com.example.ucvme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923722973928-nn42j02keijithcpf9oi7smdpo698jca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCirMh_RUQT7rKHtAsgsAQ4pWf3rkzRCvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923722973928-nn42j02keijithcpf9oi7smdpo698jca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
