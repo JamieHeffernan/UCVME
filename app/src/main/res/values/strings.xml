@@ -3,4 +3,15 @@
     <string name="county_prompt">Select county</string>
     <string name="location_prompt">Select location</string>
     <string name="job_type_prompt">Job type</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="register">Register</string>
+    <string name="log_out">Log Out</string>
+    <string name="create_job">Create Job</string>
+    <string name="browse_profiles">Browse Profiles</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="browse_jobs">Browse Jobs</string>
 </resources>

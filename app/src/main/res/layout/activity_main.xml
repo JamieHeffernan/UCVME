@@ -14,7 +14,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
-        android:text="Browse Jobs"
+        android:text="@string/browse_jobs"
         app:layout_constraintBottom_toTopOf="@+id/editprofilebutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -27,7 +27,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="56dp"
-        android:text="Edit Profile"
+        android:text="@string/edit_profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -39,8 +39,8 @@
         android:layout_height="70dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="24dp"
-        android:text="Browse Profiles"
+        android:layout_marginBottom="16dp"
+        android:text="@string/browse_profiles"
         app:layout_constraintBottom_toTopOf="@+id/createjobbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -53,10 +53,22 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="24dp"
-        android:text="Create Job"
+        android:text="@string/create_job"
         app:layout_constraintBottom_toTopOf="@+id/browsejobsbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/log_out"
+        app:layout_constraintBottom_toTopOf="@id/browseprofilebutton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

@@ -13,4 +13,7 @@
     <color name="bloo_500">#052743</color>
     <color name="bloo_700">#102539</color>
     <color name="grey">#303645</color>
+    <color name="colorGray">#eee</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorBlack">#000</color>
 </resources>
