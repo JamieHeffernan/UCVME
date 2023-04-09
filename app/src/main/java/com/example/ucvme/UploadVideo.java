@@ -238,7 +238,6 @@ public class UploadVideo extends AppCompatActivity {
 
     private void videoPickCamera() {
         //pick video from camera
-
         Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
         startActivityForResult(intent, VIDEO_PICK_CAMERA_CODE);
     }

@@ -66,6 +66,12 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".UploadVideo"
+            android:exported="false" />
     </application>
 
 </manifest>

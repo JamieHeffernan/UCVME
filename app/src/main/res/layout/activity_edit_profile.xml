@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/baccy">
+
+
+    <Button
+        android:id="@+id/editEmailBtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/edit_email"
+        android:layout_marginTop="200dp" />
+
+    <Button
+        android:id="@+id/editPassBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Password"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editEmailBtn"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/editVideoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Video"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editPassBtn"
+        android:layout_marginTop="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addVideosBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/editVideoBtn"
+        android:layout_below="@id/editPassBtn"
+        android:src="@drawable/ic_add_white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="-20dp"
+        app:fabCustomSize="35dp"
+        />
+
+</RelativeLayout>

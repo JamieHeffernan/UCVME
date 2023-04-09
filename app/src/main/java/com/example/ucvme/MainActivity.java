@@ -15,13 +15,12 @@ public class MainActivity extends AppCompatActivity {
     //UI views
     FirebaseAuth auth;
     FirebaseUser user;
+
     Button logOut;
     Button createJob;
-    Intent switchCreateJob;
     Button browseProfile;
-    Intent switchBrowseProfile;
     Button browseJobs;
-    Intent switchBrowseJobs;
+    Button editProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
         //initialise UI views
         auth = FirebaseAuth.getInstance();
-        logOut = findViewById(R.id.logOut);
         user = auth.getCurrentUser();
+
+        editProfile = findViewById(R.id.editprofilebutton);
+        logOut = findViewById(R.id.logOut);
+        browseProfile = findViewById(R.id.browseprofilebutton);
+        createJob = findViewById(R.id.createjobbutton);
+        browseJobs = findViewById(R.id.browsejobsbutton);
 
         //if user does not exist bring back to Login Activity
         if (user == null) {
@@ -52,39 +56,44 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Button to go to browse profiles
-        browseProfile = (Button) findViewById(R.id.browseprofilebutton);
-        switchBrowseProfile = new Intent(MainActivity.this,
-                BrowseProfiles.class);
-
         browseProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(switchBrowseProfile);
+                Intent intent = new Intent(getApplicationContext(), BrowseProfiles.class);
+                startActivity(intent);
+                finish();
             }
         });
 
         //Button to go to create job
-        createJob = (Button) findViewById(R.id.createjobbutton);
-        switchCreateJob = new Intent(MainActivity.this,
-                CreateJob.class);
-
         createJob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(switchCreateJob);
+                Intent intent = new Intent(getApplicationContext(), CreateJob.class);
+                startActivity(intent);
+                finish();
             }
         });
 
         //Button to go to browse jobs
-        browseJobs = (Button) findViewById(R.id.browsejobsbutton);
-        switchBrowseJobs = new Intent(MainActivity.this,
-                BrowseJobs.class);
-
         browseJobs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(switchBrowseJobs);
+                Intent intent = new Intent(getApplicationContext(), BrowseJobs.class);
+                startActivity(intent);
+                finish();
             }
         });
+
+        //Button to go to edit profile
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), EditProfile.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }
