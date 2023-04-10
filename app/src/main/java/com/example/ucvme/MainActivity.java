@@ -59,9 +59,7 @@ public class MainActivity extends AppCompatActivity {
         browseProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), BrowseProfiles.class);
-                startActivity(intent);
-                finish();
+                startActivity(new Intent(MainActivity.this, BrowseProfiles.class));
             }
         });
 
@@ -69,9 +67,7 @@ public class MainActivity extends AppCompatActivity {
         createJob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), CreateJob.class);
-                startActivity(intent);
-                finish();
+                startActivity(new Intent(MainActivity.this, CreateJob.class));
             }
         });
 
@@ -79,9 +75,7 @@ public class MainActivity extends AppCompatActivity {
         browseJobs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), BrowseJobs.class);
-                startActivity(intent);
-                finish();
+                startActivity(new Intent(MainActivity.this, BrowseJobs.class));
             }
         });
 
@@ -89,9 +83,7 @@ public class MainActivity extends AppCompatActivity {
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditProfile.class);
-                startActivity(intent);
-                finish();
+                startActivity(new Intent(MainActivity.this, EditProfile.class));
             }
         });
 
