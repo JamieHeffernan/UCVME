@@ -15,4 +15,11 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="browse_jobs">Browse Jobs</string>
     <string name="edit_email">Edit Email</string>
+    <string name="hello_world">Hello World</string>
+    <string name="change_password">Change Password</string>
+    <string name="upload_video">Upload Video</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm">CONFIRM</string>
 </resources>

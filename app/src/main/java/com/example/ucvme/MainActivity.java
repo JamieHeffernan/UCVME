@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseUser user;
 
+    TextView details;
     Button logOut;
     Button createJob;
     Button browseProfile;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
+        details = findViewById(R.id.userDetails);
         editProfile = findViewById(R.id.editprofilebutton);
         logOut = findViewById(R.id.logOut);
         browseProfile = findViewById(R.id.browseprofilebutton);
@@ -42,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), Login.class);
             startActivity(intent);
             finish();
+        }
+        else {
+            details.setText(user.getEmail());
         }
 
         //onClick listener for Log Out Button, logs user out and brings back to Login Activity

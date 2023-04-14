@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +27,7 @@ public class Register extends AppCompatActivity {
     Button btnRegister;
     FirebaseAuth mAuth;
     Button btnSignIn;
+    ProgressBar progressBar;
 
     @Override
     public void onStart() {
@@ -50,6 +52,7 @@ public class Register extends AppCompatActivity {
         editTextPassword = findViewById(R.id.password);
         btnRegister = findViewById(R.id.btnRegister);
         btnSignIn = findViewById(R.id.btnSignIn);
+        progressBar = findViewById(R.id.progressBar);
 
         //create onClick listener for Sign In Button which switches to Login Activity
         btnSignIn.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +68,7 @@ public class Register extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 String email, password;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
@@ -86,6 +90,7 @@ public class Register extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 //if task success, register user and take user to Login Activity
+                                progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
                                     Toast.makeText(Register.this, "Account Created!",
                                             Toast.LENGTH_SHORT).show();
