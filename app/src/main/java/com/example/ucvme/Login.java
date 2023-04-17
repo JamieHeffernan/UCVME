@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +25,7 @@ public class Login extends AppCompatActivity {
     Button btnRegister;
     FirebaseAuth mAuth;
     Button btnSignIn;
+    ProgressBar progressBar;
 
     @Override
     public void onStart() {
@@ -48,6 +50,7 @@ public class Login extends AppCompatActivity {
         editTextPassword = findViewById(R.id.password);
         btnRegister = findViewById(R.id.btnRegister);
         btnSignIn = findViewById(R.id.btnSignIn);
+        progressBar = findViewById(R.id.progressBar);
 
         //onClick listener for Register button, brings user to Register Activity
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +66,7 @@ public class Login extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 String email, password;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
@@ -84,6 +88,7 @@ public class Login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 //if login success bring them to Main Activity
+                                progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
                                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
