@@ -16,4 +16,8 @@
     <color name="colorGray">#eee</color>
     <color name="colorWhite">#fff</color>
     <color name="colorBlack">#000</color>
+    <color name="pastelBlue">#ADD8E6</color>
+    <color name="pastelPeach">#FFE5B4</color>
+    <color name="buttonGrey">#D8D8D8</color>
+
 </resources>
