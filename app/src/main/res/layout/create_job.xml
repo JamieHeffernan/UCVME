@@ -1,75 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/baccy">
 
     <!-- County dropdown -->
     <Spinner
         android:id="@+id/county"
-        android:prompt="@string/county_prompt"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:layout_marginTop="70dp"
-         />
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorGray"
+        android:prompt="@string/county_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="@+id/location"
+        app:layout_constraintStart_toStartOf="@+id/location"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Location dropdown -->
     <Spinner
         android:id="@+id/location"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorGray"
+        android:backgroundTint="@color/colorGray"
         android:prompt="@string/location_prompt"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/county"
-         />
+        app:layout_constraintBottom_toTopOf="@+id/jobType"
+        app:layout_constraintEnd_toEndOf="@+id/jobType"
+        app:layout_constraintStart_toStartOf="@+id/jobType"
+        app:layout_constraintTop_toBottomOf="@+id/county" />
 
     <!-- Job type dropdown -->
     <Spinner
         android:id="@+id/jobType"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorGray"
+        android:backgroundTint="@color/colorGray"
         android:prompt="@string/job_type_prompt"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/location"
-         />
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="@+id/description"
+        app:layout_constraintStart_toStartOf="@+id/description"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
 
     <!-- Description -->
     <EditText
         android:id="@+id/description"
-        android:layout_width="330dp"
-        android:layout_height="200dp"
-        android:backgroundTint="#000"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:background="@color/colorGray"
+        android:backgroundTint="@color/colorGray"
         android:gravity="top|left"
         android:inputType="textMultiLine"
         android:maxLines="10"
         android:minLines="5"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/create_ad"
+        app:layout_constraintEnd_toEndOf="@+id/create_ad"
+        app:layout_constraintStart_toStartOf="@+id/create_ad"
+        app:layout_constraintTop_toBottomOf="@+id/jobType" />
 
     <!-- Create ad button -->
     <Button
         android:id="@+id/create_ad"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
         android:text="CREATE AD"
-    />
+        app:layout_constraintBottom_toTopOf="@+id/browse_jobs"
+        app:layout_constraintEnd_toEndOf="@+id/browse_jobs"
+        app:layout_constraintStart_toStartOf="@+id/browse_jobs"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 
     <!-- Browse jobs button -->
     <Button
         android:id="@+id/browse_jobs"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:text="BROWSE"
-    />
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/browse_profiles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_ad" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

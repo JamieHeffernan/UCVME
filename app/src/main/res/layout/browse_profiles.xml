@@ -1,48 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/baccy">
 
     <!-- Location dropdown -->
     <Spinner
         android:id="@+id/location"
-        android:prompt="@string/location_prompt"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
-        android:layout_below="@+id/county"
-        />
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorGray"
+        android:backgroundTint="@color/colorGray"
+        android:prompt="@string/location_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/jobType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Job type dropdown -->
     <Spinner
         android:id="@+id/jobType"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorGray"
         android:prompt="@string/job_type_prompt"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/location"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
 
     <!-- Refresh button -->
     <Button
         android:id="@+id/button1"
-        android:layout_width="330dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
         android:text="REFRESH"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jobType" />
 
     <!-- List view for profiles -->
     <ListView
         android:id="@+id/list"
-        android:layout_width="330dp"
-        android:layout_height="460dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintVertical_bias="1.0" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,8 +4,8 @@
     <string name="location_prompt">Select location</string>
     <string name="job_type_prompt">Job type</string>
     <string name="login">Login</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
+    <string name="email">  Email</string>
+    <string name="password">  Password</string>
     <string name="log_in">Log In</string>
     <string name="sign_up">SIGN UP</string>
     <string name="register">Register</string>
