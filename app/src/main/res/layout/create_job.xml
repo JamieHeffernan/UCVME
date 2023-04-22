@@ -1,98 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <!-- Job type dropdown -->
-    <Spinner
-        android:id="@+id/jobType"
-        android:hint="@string/job_type_prompt"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/location"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Job Type Label -->
+        <TextView
+            android:id="@+id/jobTyp"
+            android:layout_width="330dp"
+            android:layout_height="20dp"
+            android:text="Job Type:"
+            android:textColor="@color/black"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            />
+
+        <!-- Job type dropdown -->
+        <Spinner
+            android:id="@+id/jobType"
+            android:hint="@string/job_type_prompt"
+            android:backgroundTint="#000"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/jobTyp"
+            />
+
+        <!-- Select Date Label -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="330dp"
+            android:layout_height="20dp"
+            android:text="Select Start Date:"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+             />
+
+        <!-- Date Picker -->
+        <Button
+            android:id="@+id/datePickerButton"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:text="JAN 01 2020"
+            android:textColor="@color/black"
+            style="?android:spinnerStyle"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:onClick="openDatePicker"/>
+
+        <!-- Title -->
+        <EditText
+            android:id="@+id/title"
+            android:hint="Job Title"
+            android:backgroundTint="#000"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <!-- Wage -->
+        <EditText
+            android:id="@+id/wage"
+            android:hint="Hourly Wage"
+            android:backgroundTint="#000"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <!-- Location -->
+        <EditText
+            android:id="@+id/location"
+            android:hint="Address"
+            android:backgroundTint="#000"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/county"
+            />
+
+        <!-- County -->
+        <EditText
+            android:id="@+id/county"
+            android:hint="Country"
+            android:backgroundTint="#000"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+             />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/description"
+            android:hint="Job Description"
+            android:layout_width="330dp"
+            android:layout_height="120dp"
+            android:backgroundTint="#000"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:minLines="5"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"/>
+
+        <!-- Create ad button -->
+        <Button
+            android:id="@+id/create_ad"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:text="CREATE AD"
         />
 
-    <!-- Title -->
-    <EditText
-        android:id="@+id/title"
-        android:hint="Job Title"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
+        <!-- Browse jobs button -->
+        <Button
+            android:id="@+id/browse_jobs"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:text="BROWSE"
         />
 
-    <!-- Wage -->
-    <EditText
-        android:id="@+id/wage"
-        android:hint="Hourly Wage"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        />
-
-    <!-- Location -->
-    <EditText
-        android:id="@+id/location"
-        android:hint="Address"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/county"
-        />
-
-    <!-- County -->
-    <EditText
-        android:id="@+id/county"
-        android:hint="Country"
-        android:backgroundTint="#000"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-         />
-
-    <!-- Description -->
-    <EditText
-        android:id="@+id/description"
-        android:hint="Job Description"
-        android:layout_width="330dp"
-        android:layout_height="120dp"
-        android:backgroundTint="#000"
-        android:gravity="top|left"
-        android:inputType="textMultiLine"
-        android:maxLines="10"
-        android:minLines="5"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"/>
-
-    <!-- Create ad button -->
-    <Button
-        android:id="@+id/create_ad"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:text="CREATE AD"
-    />
-
-    <!-- Browse jobs button -->
-    <Button
-        android:id="@+id/browse_jobs"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:text="BROWSE"
-    />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
