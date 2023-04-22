@@ -4,46 +4,69 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- County dropdown -->
+    <!-- Job type dropdown -->
     <Spinner
-        android:id="@+id/county"
-        android:prompt="@string/county_prompt"
+        android:id="@+id/jobType"
+        android:hint="@string/job_type_prompt"
         android:backgroundTint="#000"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="70dp"
-         />
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/location"
+        />
 
-    <!-- Location dropdown -->
-    <Spinner
+    <!-- Title -->
+    <EditText
+        android:id="@+id/title"
+        android:hint="Job Title"
+        android:backgroundTint="#000"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <!-- Wage -->
+    <EditText
+        android:id="@+id/wage"
+        android:hint="Hourly Wage"
+        android:backgroundTint="#000"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <!-- Location -->
+    <EditText
         android:id="@+id/location"
-        android:prompt="@string/location_prompt"
+        android:hint="Address"
         android:backgroundTint="#000"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/county"
-         />
+        />
 
-    <!-- Job type dropdown -->
-    <Spinner
-        android:id="@+id/jobType"
-        android:prompt="@string/job_type_prompt"
+    <!-- County -->
+    <EditText
+        android:id="@+id/county"
+        android:hint="Country"
         android:backgroundTint="#000"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/location"
          />
 
     <!-- Description -->
     <EditText
         android:id="@+id/description"
+        android:hint="Job Description"
         android:layout_width="330dp"
-        android:layout_height="200dp"
+        android:layout_height="120dp"
         android:backgroundTint="#000"
         android:gravity="top|left"
         android:inputType="textMultiLine"

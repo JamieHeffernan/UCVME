@@ -22,4 +22,8 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="new_password">New Password</string>
     <string name="confirm">CONFIRM</string>
+    <string-array name="jobType_array">
+        <item>Part Time</item>
+        <item>Full Time</item>
+    </string-array>
 </resources>
