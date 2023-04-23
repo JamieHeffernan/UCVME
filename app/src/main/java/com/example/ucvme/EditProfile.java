@@ -71,14 +71,6 @@ public class EditProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
-        //initialise actionbar
-        actionBar = getSupportActionBar();
-        //title
-        actionBar.setTitle("Edit Profile");
-        //add back button
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
         //initialise UI views
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();

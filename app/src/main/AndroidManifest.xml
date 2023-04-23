@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <!-- permissions -->
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.permission.CAMERA" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -16,13 +17,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UCVME"
         tools:targetApi="31">
-        <activity
-            android:name=".ChangePassword"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
         <activity
             android:name=".Register"
             android:exported="false">
@@ -47,31 +41,13 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".BrowseProfiles"
-            android:exported="true"
-            tools:ignore="DuplicateActivity">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".CreateJob"
-            android:exported="true"
-            tools:ignore="DuplicateActivity">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".BrowseJobs"
-            android:exported="true"
-            tools:ignore="DuplicateActivity">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".AddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BrowseJob"
             android:exported="false" />
     </application>
 
