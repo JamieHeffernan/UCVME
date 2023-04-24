@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,9 +40,13 @@ public class AddActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //call functions
-                insertData();
-                clearAll();
+                //call function
+                if (name.getText().toString().equals("") || job.getText().toString().equals("") || email.getText().toString().equals("")) {
+                    Toast.makeText(AddActivity.this, "Name, Job and Email Are Required", Toast.LENGTH_SHORT).show();
+                } else {
+                    insertData();
+                    clearAll();
+                }
             }
         });
 
