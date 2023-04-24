@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     TextView details;
     Button logOut;
-    Button createJob;
-    Button browseProfile;
     Button browseJobs;
     Button editProfile;
 
@@ -36,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         details = findViewById(R.id.userDetails);
         editProfile = findViewById(R.id.editprofilebutton);
         logOut = findViewById(R.id.logOut);
-        browseProfile = findViewById(R.id.browseprofilebutton);
-        createJob = findViewById(R.id.createjobbutton);
         browseJobs = findViewById(R.id.browsejobsbutton);
 
         //if user does not exist bring back to Login Activity
@@ -47,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
         else {
+            //set textView as current users email
             details.setText(user.getEmail());
         }
 
@@ -54,26 +51,12 @@ public class MainActivity extends AppCompatActivity {
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //sign out user out of Firebase instance
                 FirebaseAuth.getInstance().signOut();
+                //bring user back into login Activity
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
                 finish();
-            }
-        });
-
-        //Button to go to browse profiles
-        browseProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, BrowseProfiles.class));
-            }
-        });
-
-        //Button to go to create job
-        createJob.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, CreateJob.class));
             }
         });
 
@@ -81,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         browseJobs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, BrowseJobs.class));
+                startActivity(new Intent(MainActivity.this, BrowseJob.class));
             }
         });
 
