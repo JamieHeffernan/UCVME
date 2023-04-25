@@ -28,7 +28,8 @@ Then a prompt window will open up for you to connect to the database make sure t
 
 ***These are located in UCVME/app/build.gradle inside "dependencies"***
 
-`implementation 'androidx.appcompat:appcompat:1.6.1'
+```
+ implementation 'androidx.appcompat:appcompat:1.6.1'
  implementation 'com.google.android.material:material:1.8.0'
  implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
@@ -49,7 +50,8 @@ Then a prompt window will open up for you to connect to the database make sure t
 
  testImplementation 'junit:junit:4.13.2'
  androidTestImplementation 'androidx.test.ext:junit:1.1.5'
- androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'`
+ androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+```
 
 **Step 3.**
 
