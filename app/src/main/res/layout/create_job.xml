@@ -7,50 +7,47 @@
     <!-- County dropdown -->
     <Spinner
         android:id="@+id/county"
-        android:prompt="@string/county_prompt"
-        android:backgroundTint="#000"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="70dp"
-         />
+        android:backgroundTint="#000"
+        android:prompt="@string/county_prompt" />
 
     <!-- Location dropdown -->
     <Spinner
         android:id="@+id/location"
-        android:prompt="@string/location_prompt"
-        android:backgroundTint="#000"
         android:layout_width="330dp"
         android:layout_height="50dp"
+        android:layout_below="@+id/county"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/county"
-         />
+        android:backgroundTint="#000"
+        android:prompt="@string/location_prompt" />
 
     <!-- Job type dropdown -->
     <Spinner
         android:id="@+id/jobType"
-        android:prompt="@string/job_type_prompt"
-        android:backgroundTint="#000"
         android:layout_width="330dp"
         android:layout_height="50dp"
+        android:layout_below="@+id/location"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/location"
-         />
+        android:backgroundTint="#000"
+        android:prompt="@string/job_type_prompt" />
 
     <!-- Description -->
     <EditText
         android:id="@+id/description"
         android:layout_width="330dp"
         android:layout_height="200dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#000"
         android:gravity="top|left"
         android:inputType="textMultiLine"
         android:maxLines="10"
-        android:minLines="5"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"/>
+        android:minLines="5" />
 
     <!-- Create ad button -->
     <Button
@@ -59,8 +56,8 @@
         android:layout_height="50dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
-        android:text="CREATE AD"
-    />
+        android:backgroundTint="@color/bloo_500"
+        android:text="CREATE AD" />
 
     <!-- Browse jobs button -->
     <Button
@@ -69,7 +66,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
-        android:text="BROWSE"
-    />
+        android:backgroundTint="@color/bloo_500"
+        android:text="BROWSE" />
 
 </LinearLayout>

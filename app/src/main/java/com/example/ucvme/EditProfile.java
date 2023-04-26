@@ -44,7 +44,6 @@ public class EditProfile extends AppCompatActivity {
     //actionbar
     private ActionBar actionBar;
     //UI Views
-    private EditText titleEt;
     private VideoView videoView;
     private Button uploadVideoBtn;
     private Button changePassBtn;
@@ -82,10 +81,8 @@ public class EditProfile extends AppCompatActivity {
         //initialise UI views
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
-        titleEt = findViewById(R.id.titleEt);
         videoView = findViewById(R.id.videoView);
         uploadVideoBtn = findViewById(R.id.uploadVideoBtn);
-        changePassBtn = findViewById(R.id.changePassBtn);
         pickVideoFab = findViewById(R.id.pickVideoFab);
 
         //setup progress dialog
@@ -101,11 +98,7 @@ public class EditProfile extends AppCompatActivity {
         uploadVideoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                title = titleEt.getText().toString().trim();
-                if (TextUtils.isEmpty(title)){
-                    Toast.makeText(EditProfile.this, "Title is required...", Toast.LENGTH_SHORT).show();
-                }
-                else if (videoUri==null){
+                if (videoUri==null){
                     //video is not picked
                     Toast.makeText(EditProfile.this, "Pick a video before you upload!", Toast.LENGTH_SHORT).show();
                 }
@@ -154,7 +147,6 @@ public class EditProfile extends AppCompatActivity {
                             HashMap<String, Object> hashMap = new HashMap<>();
                             hashMap.put("userid", "" + user.getUid());
                             hashMap.put("id", "" + timestamp);
-                            hashMap.put("title", "" + title);
                             hashMap.put("timestamp", "" + timestamp);
                             hashMap.put("videoUrl", "" + downloadUri);
 

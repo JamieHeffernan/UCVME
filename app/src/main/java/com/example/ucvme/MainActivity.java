@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
-        details = findViewById(R.id.userDetails);
+        //details = findViewById(R.id.userDetails);
         editProfile = findViewById(R.id.editprofilebutton);
         logOut = findViewById(R.id.logOut);
         browseProfile = findViewById(R.id.browseprofilebutton);

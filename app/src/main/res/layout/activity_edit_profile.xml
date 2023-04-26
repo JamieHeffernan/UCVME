@@ -1,59 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorGray"
-    android:padding="10dp"
-    >
+    android:background="@color/bloo_200"
+    android:padding="10dp">
 
     <!--Video Title-->
-    <EditText
-        android:id="@+id/titleEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:hint="@string/enter_title"
-        android:inputType="textPersonName|textCapSentences"
-        android:padding="10dp"
-        android:textColor="@color/colorBlack"/>
 
     <!--Video-->
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_below="@+id/titleEt"
-        android:layout_marginTop="5dp"/>
 
     <!--Button Upload-->
-    <Button
-        android:id="@+id/uploadVideoBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/upload_video"
-        android:layout_below="@id/videoView"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/colorWhite"/>
 
     <!--Button Change Password-->
-    <Button
-        android:id="@+id/changePassBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/uploadVideoBtn"
-        android:text="@string/change_password"
-        android:textColor="@color/colorWhite"/>
 
     <!--Pick Video FAB (Floating Action Button)-->
+
+    <Spinner
+        android:id="@+id/location2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/county"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#000"
+        android:prompt="@string/location_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/pickVideoFab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/county2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#000"
+        android:prompt="@string/county_prompt"
+        app:layout_constraintBottom_toTopOf="@+id/location2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <Button
+        android:id="@+id/uploadVideoBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/bloo_700"
+        android:text="Apply Changes"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/pickVideoFab"
+        android:layout_width="51dp"
+        android:layout_height="54dp"
+        android:src="@drawable/ic_pick_video_white"
+        tools:layout_editor_absoluteX="317dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <EditText
+        android:id="@+id/userName3"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorGray"
+
+        android:hint="@string/name"
+        android:inputType="textPersonName|text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/county2"
+        app:layout_constraintEnd_toStartOf="@+id/userSurname3"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/userDOB"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorGray"
+        android:hint="Birth Date"
+        android:inputType="date|number"
+
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location2" />
+
+    <EditText
+        android:id="@+id/userSurname3"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorGray"
+        android:hint="@string/surname"
+        android:inputType="textPersonName|text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/county2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_pick_video_white"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"/>
+        android:text="My Profile"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="21dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Video"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="304dp" />
 
 
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
