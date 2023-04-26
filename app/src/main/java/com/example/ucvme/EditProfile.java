@@ -47,7 +47,6 @@ public class EditProfile extends AppCompatActivity {
     private EditText titleEt;
     private VideoView videoView;
     private Button uploadVideoBtn;
-    private Button changePassBtn;
     private FloatingActionButton pickVideoFab;
 
     //user
@@ -77,7 +76,6 @@ public class EditProfile extends AppCompatActivity {
         titleEt = findViewById(R.id.titleEt);
         videoView = findViewById(R.id.videoView);
         uploadVideoBtn = findViewById(R.id.uploadVideoBtn);
-        changePassBtn = findViewById(R.id.changePassBtn);
         pickVideoFab = findViewById(R.id.pickVideoFab);
 
         //setup progress dialog

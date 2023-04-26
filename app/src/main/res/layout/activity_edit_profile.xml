@@ -36,13 +36,6 @@
         android:textColor="@color/colorWhite"/>
 
     <!--Button Change Password-->
-    <Button
-        android:id="@+id/changePassBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/uploadVideoBtn"
-        android:text="@string/change_password"
-        android:textColor="@color/colorWhite"/>
 
     <!--Pick Video FAB (Floating Action Button)-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton

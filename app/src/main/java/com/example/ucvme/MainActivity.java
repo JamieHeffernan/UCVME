@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
-        //details = findViewById(R.id.userDetails);
+        details = findViewById(R.id.userDetails);
         editProfile = findViewById(R.id.editprofilebutton);
         logOut = findViewById(R.id.logOut);
         browseJobs = findViewById(R.id.browsejobsbutton);
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             //set textView as current users email
-            //details.setText(user.getEmail());
+            details.setText(user.getEmail());
         }
 
         //onClick listener for Log Out Button, logs user out and brings back to Login Activity
