@@ -22,6 +22,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="new_password">New Password</string>
     <string name="confirm">CONFIRM</string>
+    <string name="surname"> Surname</string>
     <string name="title_activity_test">Test</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
