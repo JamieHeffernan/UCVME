@@ -8,6 +8,13 @@
 
 > “I like simplicity; I don’t need luxury.” ~ Eleanor Roosevelt
 
+## Hardware Requirements
+> Windows 10 or higher
+> 2 GB of available disk space minimum, 4 GB Recommended
+> Required Minimum Ram 4GB
+> PC/Laptop
+> An Internet Connection
+
 ## Installation Guide
 
 **Step 1.**
@@ -81,11 +88,13 @@ If information is correctly entered you should be logged in with no errors other
 
 You will now be brought into the Main Menu of the app and here you have three options: Log Out, Browse Jobs and Edit Profile
 
-The Logout button logs you out of the application and brings you back to the Login page
-
 The Browse Jobs page has a few notable features, firstly all jobs that have been listed can be seen on this page. Users image, email, job type and name are displayed here in a list. You can also either delete or edit job entries this user should be only user specific however we did not get to implement that as a feature. A user can also add a job entry with the plus button at the bottom right. Once done so a user has to enter relevant information and for the image use an image URL found online and pasted into the app. This will add the users job entry dynamically into the list
 
 In the Edit Profile page, users can upload a video of themselves onto the application. To upload a video simply press the bottom right button and choose either camera or gallery. If choosing from the gallery make sure to drag a video into your gallery from your PC so that you can use it. Once that is done give the video a title and click upload. Once the video has been uploaded sucessfully you can click the video preview screen and play the video.
+
+## How To Quit
+
+The Logout button logs you out of the application and brings you back to the Login page from there simply press the red square at the top right of your task bar to turn of the device.
 
 ## License
 
