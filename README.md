@@ -120,6 +120,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+## Github Repository
+Click for [Github](https://github.com/JamieHeffernan/UCVME)
+
 ## Project By
 
 **Krystian Pakos, Jamie Heffernan, Karla Lozer, Domen Zupancic, Michal Korneluk**
