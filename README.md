@@ -9,11 +9,11 @@
 > “I like simplicity; I don’t need luxury.” ~ Eleanor Roosevelt
 
 ## Hardware Requirements
-> Windows 10 or higher
-> 2 GB of available disk space minimum, 4 GB Recommended
-> Required Minimum Ram 4GB
-> PC/Laptop
-> An Internet Connection
+- Windows 10 or higher
+- 2 GB of available disk space minimum, 4 GB Recommended
+- Required Minimum Ram 4GB
+- PC/Laptop
+- An Internet Connection
 
 ## Installation Guide
 
