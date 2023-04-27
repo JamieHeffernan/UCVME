@@ -4,7 +4,7 @@
 
 **UCVME is an app where users can create an account, upload a video of themselves on their profiles and either create a job or look for a person willing to do a job.**
 
-**However this app is not a professional app like LinkedIn where professional jobs are listed. This app is simple and mainly for people looking to get small tasks done such as walking a dog etc.**
+**However this app is not a professional app like LinkedIn where professional jobs are listed. This app is simple and mainly for people looking to get small tasks done such as walking a dog etc. Or looking to do simple tasks for others!**
 
 > “I like simplicity; I don’t need luxury.” ~ Eleanor Roosevelt
 
